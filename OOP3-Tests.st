@@ -1,0 +1,1 @@
+ContractObject subclass: #Animal	instanceVariableNames: 'numOfLegs canMakeNoise'	classVariableNames: ''	poolDictionaries: ''	category: 'OOP3-Tests'!TestCase subclass: #'OOP3_Tests'	instanceVariableNames: ''	classVariableNames: ''	poolDictionaries: ''	category: 'OOP3-Tests'!!OOP3_Tests methodsFor: 'testing' stamp: 'mm 4/4/2016 16:55'!testCompile		! !
