@@ -1,0 +1,11 @@
+| c a |
+c:= 'makeSound: aNoise
+"%self assert: [canMakeNoise = true]. Transcript show: ''in PRE...'';cr.%"
+"@self assert: [return]@"
+"InvariantCheck"
+Transcript show: ''code to make noise'';cr. "This is the method code"
+"this is just a comment"
+^false'.
+Animal compile: c.
+a:= Animal new.
+a makeSound: 'nn'.

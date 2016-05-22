@@ -1,0 +1,6 @@
+checkPreConditions: tracedObj selector: preCond args: args classHir: classHir
+	|worked doesntExistAtAll|
+	worked:=0. "if flag stays 0 then all preconds failed"
+	doesntExistAtAll:=1.
+	(classHir) do: [ :curr | (curr includesSelector: preCond) ifTrue: [doesntExistAtAll:=0. [self evaluateCompMethod: tracedObj selector: preCond args: args class: curr. worked:=1 ] on: AssertionFailure do: [] ]].
+	((worked = 1) or: (doesntExistAtAll = 1)) ifTrue: [^true] ifFalse: [^false]
